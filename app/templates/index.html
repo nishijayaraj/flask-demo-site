@@ -1,0 +1,16 @@
+<html>
+    <head>
+        {% if title %}
+        <title>{{ title }} - Microblog</title>
+        {% else %}
+        <title>Welcome to sample App!</title>
+        {% endif %}
+    </head>
+    <body>
+        <h1> Some of the values...!</h1>
+        {% for key, value in data.items() %}
+           <p>{{key}} : {{value}} </p>
+        {% endfor %}
+           
+    </body>
+</html>
