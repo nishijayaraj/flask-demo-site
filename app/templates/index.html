@@ -5,10 +5,11 @@
         {% else %}
         <title>Welcome to sample App!</title>
         {% endif %}
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
     </head>
     <body>
-        <h1> Some of the values...!</h1>
-        {% for key, value in data.items() %}
+        <h1> Some of the values...</h1>
+        {% for key, value in data.items() if key in display_items %}
            <p>{{key}} : {{value}} </p>
         {% endfor %}
            
