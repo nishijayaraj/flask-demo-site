@@ -8,7 +8,7 @@
         <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
     </head>
     <body>
-        <h1> Some of the values...</h1>
+        <h1> Sample data...</h1>
         <table>
           <thead>
             {% for key in data[0] if key in display_items %}
@@ -19,7 +19,7 @@
          {% for row in data %}
            <tr>
            {% for key, value in row.items() if key in display_items %}
-              <td> <p>{{key}} : {{value}} </p>
+              <td> {{value}} </td>
            {% endfor %}
            </tr>
          {% endfor %}
