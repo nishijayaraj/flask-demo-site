@@ -8,7 +8,7 @@ import requests
 @app.route('/index')
 def index():
   title = "sample app"
-  url = "http://www.mocky.io/v2/5a6485cf2b00000509f41487"
+  url = " http://www.mocky.io/v2/5a64930e2b0000a20af41495"
   res = requests.get(url)
   print('*************')
   print res
@@ -21,4 +21,4 @@ def index():
     "Current": 0,
     "Resistance": 0}]'''
     
-  return render_template("index.html",title=title, data=data[0], display_items = display_items) 
+  return render_template("index.html",title=title, data=data, display_items = display_items) 

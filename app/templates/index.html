@@ -9,9 +9,22 @@
     </head>
     <body>
         <h1> Some of the values...</h1>
-        {% for key, value in data.items() if key in display_items %}
-           <p>{{key}} : {{value}} </p>
-        {% endfor %}
+        <table>
+          <thead>
+            {% for key in data[0] if key in display_items %}
+               <th>{{ key }}</th>
+            {% endfor %}
+          </thead>
+          <tbody>
+         {% for row in data %}
+           <tr>
+           {% for key, value in row.items() if key in display_items %}
+              <td> <p>{{key}} : {{value}} </p>
+           {% endfor %}
+           </tr>
+         {% endfor %}
+          </tbody>
+        </table>
            
     </body>
 </html>
